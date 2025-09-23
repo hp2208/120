@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>120 tình huống mới nhất 2025</title>
+    <style>
+        * {
+            box-sizing: content-box;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        *::-webkit-scrollbar {
+            display: none;
+        }
+
+        button {
+            user-select: none;
+            outline: none;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        button:focus-visible {
+            outline: none;
+        }
+
+        button {
+            pointer-events: auto;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background-color: black;
+        }
+
+        #topMenu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6vh;
+            background: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        button {
+            width: 40px;
+            padding: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background: #555;
+            color: white;
+        }
+
+        #topMenu button:hover {
+            background: #777;
+        }
+
+        #content {
+            padding-top: 6vh;
+        }
+
+        @media (orientation: landscape) {
+            .row {
+                display: flex;
+                flex-direction: row;
+                width: 100vw;
+                height: 94vh;
+            }
+
+            .video-cell {
+                width: 100%;
+                height: 100%;
+                position: relative;
+            }
+
+            .img-cell {
+                position: absolute;
+                top: 6vh;
+                left: 0;
+                width: 100vw;
+                height: 94vh;
+                z-index: 1001;
+                display: none;
+            }
+        }
+
+        @media (orientation: portrait) {
+            .row {
+                display: flex;
+                flex-direction: column;
+                width: 100vw;
+                height: 72vh;
+                /* PC 65, iPhone 72, iPad 80 */
+            }
+
+            .cell {
+                width: 100%;
+                height: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+            }
+
+            .img-cell {
+                border-top: 5px solid gray;
+                position: relative;
+                width: 100%;
+                height: 50%;
+                transform: none;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cell {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .img-cell {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+            object-fit: cover;
+        }
+
+        .video-name-label {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 16px;
+            z-index: 10;
+            pointer-events: none;
+            border-radius: 2px;
+            text-align: center;
+        }
+
+        #point-label {
+            position: fixed;
+            background: rgba(0, 0, 0, 0.5);
+            width: 140px;
+            top: 40vh;
+            left: calc(50vw - 70px);
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            z-index: 1002;
+        }
+
+        p {
+            margin: 0;
+            padding: 2px 10px;
+        }
+
+        table {
+            color: white;
+            width: 80%;
+            border-collapse: collapse;
+            margin: 0 10%;
+        }
+
+        td {
+            padding: 6px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="topMenu">
+        <!-- Array buttons -->
+        <button onclick="v(b)">HN</button>
+        <button onclick="v(c)">Quê</button>
+        <button onclick="v(d)">CT</button>
+        <button onclick="v(e)">Núi</button>
+        <button onclick="v(f)">QLA</button>
+        <button onclick="v(g)">QLB</button>
+        <!-- Mix buttons -->
+        <button onclick="t(b)">...HN</button>
+        <button onclick="t(c)">...Quê</button>
+        <button onclick="t(d)">...CT</button>
+        <button onclick="t(e)">...Núi</button>
+        <button onclick="t(f)">...QLA</button>
+        <button onclick="t(g)">...QLB</button>
+        <button onclick="t(h)">~</button>
+    </div>
+
+    <div id="content">
+      <div>
+        <table>
+          <tbody>
+            <th>
+              <td colspan="2" style="text-align: center;">
+                <b>CÁC CHƯƠNG DƯỚI ĐÂY ĐÃ BAO GỒM CÁC TÌNH HUỐNG TAI NẠN ĐƯỢC ĐỀ CẬP TRONG CHƯƠNG 6</b>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button onclick="v(b)">HN</button>
+              </td>
+              <td>
+                <a>Chương 1: Giao thông trong đô thị</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button onclick="v(c)">Quê</button>
+              </td>
+              <td>
+                <a>Chương 2: Giao thông ngoài đô thị</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button onclick="v(d)">CT</button>
+              </td>
+              <td>
+                <a>Chương 3: Giao thông trên cao tốc</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button onclick="v(e)">Núi</button>
+              </td>
+              <td>
+                <a>Chương 4: Giao thông trên đường núi</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button onclick="v(f)">QLA</button>
+              </td>
+              <td>
+                <a>Chương 5A: Giao thông trên đường quốc lộ (đường đôi)</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button onclick="v(g)">QLB</button>
+              </td>
+              <td>
+                <a>Chương 5B: Giao thông trên đường quốc lộ (đường hai chiều)</a>
+              </td>
+            </tr>
+            <th>
+              <td colspan="2" style="text-align: center;">
+                <b>CÁC TÌNH HUỐNG DƯỚI ĐÂY SẼ ĐƯỢC SẮP XẾP NGẪU NHIÊN ĐỂ ÔN TẬP</b>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button onclick="t(b)">...HN</button>
+              </td>
+              <td>
+                <a>Chương 1: Giao thông trong đô thị</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button onclick="t(c)">...Quê</button>
+              </td>
+              <td>
+                <a>Chương 2: Giao thông ngoài đô thị</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button onclick="t(d)">...CT</button>
+              </td>
+              <td>
+                <a>Chương 3: Giao thông trên cao tốc</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button onclick="t(e)">...Núi</button>
+              </td>
+              <td>
+                <a>Chương 4: Giao thông trên đường núi</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button onclick="t(f)">...QLA</button>
+              </td>
+              <td>
+                <a>Chương 5A: Giao thông trên đường quốc lộ (đường đôi)</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button onclick="t(g)">...QLB</button>
+              </td>
+              <td>
+                <a>Chương 5B: Giao thông trên đường quốc lộ (đường hai chiều)</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button onclick="t(h)">~</button>
+              </td>
+              <td>
+                <a>120 TÌNH HUỐNG NGẪU NHIÊN</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="point-label"></div>
+    <script>
+      const a = 0;
+
+      const b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 41, 42, 104, 110, 118];
+      const c = [30, 31, 32, 33, 34, 35, 36, 37, 38, 40];
+      const d = [39, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 91, 93, 102];
+      const e = [64, 65, 67, 68, 69, 70, 71, 72, 73, 92, 97, 98, 99, 106, 108, 112, 116];
+      const f = [74, 75, 76, 77, 78, 80, 81, 83, 84, 88, 89, 90, 95, 96, 101, 103, 113];
+      const g = [14, 66, 79, 82, 85, 86, 87, 94, 100, 105, 107, 109, 111, 114, 115, 117, 119, 120];
+      const h = Array.from({ length: 120 }, (_, i) => i + 1);
+
+      let i = [];
+      let j = 0;
+      let k = 0;
+      window.l = true;
+
+      function m() {
+          window.l = !window.l;
+          const n = document.querySelector('.video-name-label');
+          if (!n) return;
+          if (!n.dataset.originalName) {
+              n.dataset.originalName = n.textContent;
+          }
+          n.textContent = window.l ? n.dataset.originalName : '000TH';
+      }
+
+      function o(p) {
+          const q = p.slice();
+          for (let r = q.length - 1; r > 0; r--) {
+              const s = Math.floor(Math.random() * (r + 1));
+              [q[r], q[s]] = [q[s], q[r]];
+          }
+          return q;
+      }
+
+      function t(p) {
+          u(o(p));
+      }
+
+      function v(p) {
+          u(p);
+      }
+
+      function u(p) {
+          i = p;
+          j = 0;
+
+          const w = document.getElementById('content');
+          w.innerHTML = '';
+
+          const x = document.createElement('div');
+          x.className = 'row';
+
+          const y = document.createElement('div');
+          y.className = 'cell video-cell';
+          y.style.position = 'relative';
+
+          const z = document.createElement('video');
+          z.muted = true;
+          z.controls = false;
+          z.playsInline = true;
+          z.loop = false;
+          z.setAttribute('role', 'img');
+          y.appendChild(z);
+
+          const A = document.createElement('div');
+          A.className = 'video-name-label';
+          y.appendChild(A);
+          y.dataset.nameLabel = 'true';
+
+          const B = document.createElement('div');
+          B.className = 'cell img-cell';
+          if (window.matchMedia("(orientation: portrait)").matches) {
+              B.style.display = 'block';
+          } else {
+              B.style.display = 'none';
+          }
+          B.addEventListener('click', (C) => {
+              if (window.matchMedia("(orientation: landscape)").matches) {
+                  B.style.display = 'none';
+              }
+          });
+
+          x.appendChild(y);
+          x.appendChild(B);
+          w.appendChild(x);
+
+          D(0);
+          E();
+
+          z.addEventListener("pause", (C) => { F(z.currentTime) });
+          z.addEventListener("play", (C) => { document.getElementById("point-label").innerHTML = "" });
+
+          z.addEventListener('click', (C) => {
+              const D1 = y.getBoundingClientRect();
+              const D2 = C.clientX - D1.left;
+              const D3 = C.clientY - D1.top;
+
+              const D4 = D1.width / 2;
+              const D5 = D1.height / 2;
+
+              if (D2 < D4 && D3 < D5) {
+                  if (window.matchMedia("(orientation: landscape)").matches) {
+                      const E1 = document.querySelector('.img-cell');
+                      if (E1) E1.style.display = 'none';
+                  }
+                  z.paused ? z.play() : z.pause();
+              }
+              else if (D2 >= D4 && D3 < D5) {
+                  G();
+                  if (window.matchMedia("(orientation: portrait)").matches) {
+                      z.paused ? z.play() : z.pause();
+                  } else {
+                      z.pause();
+                  }
+              }
+              else if (D2 < D4 && D3 >= D5) {
+                  H();
+              }
+              else if (D2 >= D4 && D3 >= D5) {
+                  I();
+              }
+          });
+      }
+
+      function D(p) {
+          j = p;
+          k = videoTags[i[p]];
+          const q = String(i[j]).padStart(3, '0');
+          const r = document.querySelector('.row');
+          const s = r.querySelector('video');
+          const t = r.querySelector('.video-name-label');
+          const u = r.querySelector('.img-cell');
+
+          s.pause();
+          s.src = `v/th${q}.mp4`;
+          s.onprogress = null;
+          s.oncanplaythrough = null;
+
+          t.innerHTML = `<p>0%</p><p>ĐANG TẢI VIDEO</p>`;
+          t.dataset.originalName = `${String(j + 1).padStart(3, '0')}\/${i.length} TH${q}`;
+          u.style.backgroundImage = `url(i/th${q}.jpg)`;
+
+          s.load();
+
+          let v = false;
+          let w = false;
+
+          s.onloadedmetadata = () => { w = true; };
+
+          const x = setInterval(() => {
+              if (!w || !s.duration || s.buffered.length === 0) return;
+              const y = s.buffered.end(s.buffered.length - 1);
+              const z = Math.min(100, Math.round((y / s.duration) * 100));
+
+              t.innerHTML = `<p>${z}%</p><p>ĐANG TẢI VIDEO</p>`;
+
+              if (!v && z >= 95) {
+                  v = true;
+                  clearInterval(x);
+                  t.innerHTML = `<p><b>${String(j + 1).padStart(3, '0')}\/${i.length}</b></p><p>TÌNH HUỐNG ${q}</p>`;
+                  if (!window.l) {
+                      t.textContent = `${String(j + 1).padStart(3, '0')}\/${i.length} TH000`;
+                  }
+                  setTimeout(() => { s.play(); }, a);
+              }
+          }, 100);
+
+          setTimeout(() => {
+              if (!v) {
+                  v = true;
+                  clearInterval(x);
+                  t.innerHTML = `<p><b>${String(j + 1).padStart(3, '0')}\/${i.length}</b></p><p>TÌNH HUỐNG ${q}</p>`;
+                  if (!window.l) {
+                      t.textContent = `${String(j + 1).padStart(3, '0')}\/${i.length} TH000`;
+                  }
+                  s.play();
+              }
+          }, 10000);
+      }
+
+      function H() {
+          if (j > 0) {
+              D(j - 1);
+              if (window.matchMedia("(orientation: landscape)").matches) {
+                  const a1 = document.querySelector('.img-cell');
+                  if (a1) a1.style.display = 'none';
+              }
+          } else {
+              alert("Đang ở video đầu tiên!!!");
+          }
+      }
+
+      function I() {
+          if (j < i.length - 1) {
+              D(j + 1);
+              if (window.matchMedia("(orientation: landscape)").matches) {
+                  const b1 = document.querySelector('.img-cell');
+                  if (b1) b1.style.display = 'none';
+              }
+          } else {
+              alert("Đã hết video!!!");
+          }
+      }
+
+      function E() {
+          const c1 = document.querySelector('.img-cell');
+          if (!c1) return;
+          if (window.matchMedia("(orientation: portrait)").matches) {
+              c1.style.display = 'block';
+          } else {
+              c1.style.display = 'none';
+          }
+      }
+
+      function G() {
+          const d1 = document.querySelector('.img-cell');
+          if (!d1) return;
+          if (!window.matchMedia("(orientation: landscape)").matches) return;
+          d1.style.display = (d1.style.display === 'none' || d1.style.display === '') ? 'block' : 'none';
+      }
+
+      window.addEventListener('resize', E);
+      window.addEventListener('orientationchange', E);
+
+      document.addEventListener('keydown', (e) => {
+          const v = document.querySelector('.row video');
+          switch (e.key) {
+              case 'ArrowUp': case 'w': case 'W':
+                  e.preventDefault();
+                  H();
+                  break;
+              case 'ArrowDown': case 's': case 'S':
+                  e.preventDefault();
+                  I();
+                  break;
+              case ' ':
+                  e.preventDefault();
+                  if (!v) return;
+                  if (window.matchMedia("(orientation: landscape)").matches) {
+                      const g1 = document.querySelector('.img-cell');
+                      if (g1) g1.style.display = 'none';
+                  }
+                  v.paused ? v.play() : v.pause();
+                  break;
+              case 'e': case 'E':
+                  e.preventDefault();
+                  G();
+                  if (!v) return;
+                  if (window.matchMedia("(orientation: portrait)").matches) {
+                      v.paused ? v.play() : v.pause();
+                  } else {
+                      v.pause();
+                  }
+                  break;
+              case 'ArrowLeft': case 'a': case 'A':
+                  e.preventDefault();
+                  v.currentTime = Math.max(0, v.currentTime - 2);
+                  break;
+              case 'ArrowRight': case 'd': case 'D':
+                  e.preventDefault();
+                  v.currentTime = Math.max(0, v.currentTime + 2);
+                  break;
+          }
+      });
+
+      function F(t) {
+          const u = document.getElementById("point-label");
+          let v = "";
+          let w = Number((k.pts - t).toFixed(2));
+          let x = (k.pte - k.pts) / 5;
+
+          if (k.pts > t) {
+              v = `<p style="font-size: 84px; font-weight: bold; color: red;">0</p><p style="font-size: 24px;">ĐIỂM</p><p>Nhanh ${w}s</p>`;
+          } else if (k.pts + 0.15 > t) {
+              v = `<p style="font-size: 84px; font-weight: bold; color: red;">0</p><p style="font-size: 24px;">ĐIỂM</p><p> Hơi Nhanh ${w}s</p>`;
+          } else if (t > k.pte) {
+              v = `<p style="font-size: 84px; font-weight: bold; color: red;">0</p><p style="font-size: 24px;">ĐIỂM</p><p>Chậm ${w}s</p>`;
+          } else {
+              for (let i = 1; i < 6; i++) {
+                  if ((k.pts + x * i) > t) {
+                      v = `<p style="font-size: 84px; font-weight: bold; color: #90EE90;">${6 - i}</p><p style="font-size: 24px;">ĐIỂM</p><p>Chậm ${w}s</p>`;
+                      i = 5;
+                  }
+              }
+          }
+          u.innerHTML = v;
+      }
+
+    </script>
+    <script>
+      const videoTags=[null,{v:1,tt:12.64,pts:6.927,pte:9.64},{v:2,tt:18.633,pts:13.415,pte:17.633},{v:3,tt:17.54,pts:11.576,pte:14.54},{v:4,tt:14.789,pts:7.027,pte:11.789},{v:5,tt:15.973,pts:8.897,pte:12.973},{v:6,tt:15.943,pts:9.671,pte:12.943},{v:7,tt:14.486,pts:7.036,pte:11.486},{v:8,tt:12.95,pts:7.006,pte:9.95},{v:9,tt:10.48,pts:4.741,pte:7.48},{v:10,tt:15.732,pts:8.383,pte:12.732},{v:11,tt:17.22,pts:6.682,pte:14.22},{v:12,tt:15.21,pts:9.893,pte:12.21},{v:13,tt:13.137,pts:7.791,pte:10.137},{v:14,tt:17.287,pts:10.545,pte:14.287},{v:15,tt:15.113,pts:9.556,pte:12.113},{v:16,tt:13.355,pts:7.512,pte:10.355},{v:17,tt:10.298,pts:4.814,pte:7.298},{v:18,tt:14.165,pts:7.822,pte:11.165},{v:19,tt:14.809,pts:8.955,pte:11.809},{v:20,tt:21.584,pts:15.059,pte:18.584},{v:21,tt:16.24,pts:9.887,pte:13.24},{v:22,tt:15.683,pts:9.65,pte:12.683},{v:23,tt:17.352,pts:11.558,pte:14.352},{v:24,tt:16.104,pts:10.173,pte:13.104},{v:25,tt:16.369,pts:7.182,pte:13.369},{v:26,tt:16.94,pts:9.223,pte:13.94},{v:27,tt:16.826,pts:10.849,pte:13.826},{v:28,tt:14.877,pts:8.334,pte:11.877},{v:29,tt:14.859,pts:8.378,pte:11.859},{v:30,tt:14.716,pts:7.188,pte:11.716},{v:31,tt:14.231,pts:6.165,pte:11.231},{v:32,tt:15.077,pts:8.16,pte:12.077},{v:33,tt:15.155,pts:9.017,pte:12.155},{v:34,tt:12.284,pts:5.019,pte:9.284},{v:35,tt:9.074,pts:2.845,pte:6.074},{v:36,tt:18.6,pts:13.205,pte:15.6},{v:37,tt:22.214,pts:13.844,pte:19.214},{v:38,tt:13.969,pts:7.84,pte:10.969},{v:39,tt:17.649,pts:11.549,pte:14.649},{v:40,tt:12.985,pts:6.094,pte:9.985},{v:41,tt:14.102,pts:9.317,pte:11.102},{v:42,tt:12.935,pts:6.93,pte:9.935},{v:43,tt:13.076,pts:6.197,pte:10.076},{v:44,tt:11.563,pts:4.512,pte:8.563},{v:45,tt:15.389,pts:9.5,pte:12.389},{v:46,tt:22.883,pts:16.662,pte:19.883},{v:47,tt:20.793,pts:14.442,pte:17.793},{v:48,tt:10.213,pts:4.7,pte:7.213},{v:49,tt:14.068,pts:6.759,pte:11.068},{v:50,tt:15.781,pts:8.465,pte:12.781},{v:51,tt:16.763,pts:8.804,pte:13.763},{v:52,tt:19.07,pts:12.491,pte:16.07},{v:53,tt:19.854,pts:13.026,pte:16.854},{v:54,tt:16.379,pts:9.177,pte:13.379},{v:55,tt:14.141,pts:7.241,pte:11.141},{v:56,tt:12.874,pts:7.195,pte:9.874},{v:57,tt:30.313,pts:20.432,pte:27.313},{v:58,tt:21.933,pts:14.184,pte:18.933},{v:59,tt:22.969,pts:16.78,pte:19.969},{v:60,tt:14.011,pts:7.225,pte:11.011},{v:61,tt:24.332,pts:16.52,pte:21.332},{v:62,tt:22.719,pts:15.625,pte:19.719},{v:63,tt:11.322,pts:4.267,pte:8.322},{v:64,tt:16.48,pts:10.084,pte:13.48},{v:65,tt:24.519,pts:16.717,pte:21.519},{v:66,tt:15.86,pts:9.273,pte:12.86},{v:67,tt:19.687,pts:12.569,pte:16.687},{v:68,tt:16.895,pts:10.711,pte:13.895},{v:69,tt:19.674,pts:14.495,pte:16.674},{v:70,tt:34.528,pts:28.535,pte:31.528},{v:71,tt:19.22,pts:11.995,pte:16.22},{v:72,tt:22.127,pts:14.688,pte:19.127},{v:73,tt:20.642,pts:14.798,pte:17.642},{v:74,tt:18.038,pts:10.787,pte:15.038},{v:75,tt:10.783,pts:4.792,pte:7.783},{v:76,tt:12.592,pts:6.149,pte:9.592},{v:77,tt:12.749,pts:5.977,pte:9.749},{v:78,tt:16.975,pts:11.152,pte:13.975},{v:79,tt:14.986,pts:9.256,pte:11.986},{v:80,tt:11.881,pts:6.218,pte:8.881},{v:81,tt:21.141,pts:14.972,pte:18.141},{v:82,tt:14.259,pts:6.252,pte:11.259},{v:83,tt:12.962,pts:7.143,pte:9.962},{v:84,tt:15.792,pts:9.115,pte:12.792},{v:85,tt:21.233,pts:15.964,pte:18.233},{v:86,tt:11.341,pts:4.14,pte:8.341},{v:87,tt:10.89,pts:3.19,pte:7.89},{v:88,tt:16.746,pts:11.11,pte:13.746},{v:89,tt:14.896,pts:8.311,pte:11.896},{v:90,tt:13.328,pts:6.405,pte:10.328},{v:91,tt:12.99,pts:5.545,pte:9.99},{v:92,tt:11.163,pts:4.898,pte:8.163},{v:93,tt:12.709,pts:5.768,pte:9.709},{v:94,tt:14.914,pts:9.207,pte:11.914},{v:95,tt:20.105,pts:13.671,pte:17.105},{v:96,tt:13.434,pts:5.583,pte:10.434},{v:97,tt:10.038,pts:3.148,pte:7.038},{v:98,tt:12.31,pts:5.228,pte:9.31},{v:99,tt:13.417,pts:6.58,pte:10.417},{v:100,tt:13.648,pts:6.06,pte:10.648},{v:101,tt:15.923,pts:8.676,pte:12.923},{v:102,tt:11.318,pts:4.395,pte:8.318},{v:103,tt:20.947,pts:13.427,pte:17.947},{v:104,tt:17.637,pts:10.815,pte:14.637},{v:105,tt:14.253,pts:8.253,pte:11.253},{v:106,tt:17.551,pts:10.442,pte:14.551},{v:107,tt:15.201,pts:8.598,pte:12.201},{v:108,tt:14.474,pts:8.412,pte:11.474},{v:109,tt:16.272,pts:9.551,pte:13.272},{v:110,tt:17.309,pts:11.104,pte:14.309},{v:111,tt:17.08,pts:10.859,pte:13.08},{v:112,tt:13.705,pts:6.848,pte:10.705},{v:113,tt:18.623,pts:10.304,pte:15.623},{v:114,tt:13.187,pts:6.187,pte:10.187},{v:115,tt:14.282,pts:6.282,pte:11.282},{v:116,tt:15.612,pts:9.612,pte:12.612},{v:117,tt:17.013,pts:9.013,pte:14.013},{v:118,tt:14.419,pts:8.419,pte:11.419},{v:119,tt:14.056,pts:6.056,pte:11.056},{v:120,tt:13.853,pts:5.853,pte:10.853}]; 
+    </script>
+
+</body>
+
+</html>
+
