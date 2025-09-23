@@ -525,6 +525,7 @@
 
       function H() {
           if (j > 0) {
+              document.getElementById("point-label").innerHTML = ""
               D(j - 1);
               if (window.matchMedia("(orientation: landscape)").matches) {
                   const a1 = document.querySelector('.img-cell');
@@ -537,6 +538,7 @@
 
       function I() {
           if (j < i.length - 1) {
+              document.getElementById("point-label").innerHTML = ""
               D(j + 1);
               if (window.matchMedia("(orientation: landscape)").matches) {
                   const b1 = document.querySelector('.img-cell');
