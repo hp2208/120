@@ -578,7 +578,7 @@
       const imgCell = row.querySelector('.img-cell');
 
       video.pause();
-      video.src = `v/th${num}.mp4`;
+      video.src = `https://v.vnecdn.net/vnexpress/video/web/mp4/2024/03/25/th${num}.mp4`;
       video.load();
 
       nameLabel.textContent = `${String(currentIndex + 1).padStart(3, '0')}\/${currentList.length} TH${num}`;
@@ -944,5 +944,6 @@
   </script>
 
 </body>
+
 
 </html>
