@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="i/120.png">
+  <link rel="shortcut icon" type="image/png" href="i/120.png" />
+  <title>120 tình huống mới nhất 2025</title>
+  <style>
+    * {
+      box-sizing: content-box;
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none;
+      /* Firefox */
+    }
+
+    *::-webkit-scrollbar {
+      display: none;
+      /* Chrome, Safari, Opera */
+    }
+
+    button {
+      user-select: none;
+      /* prevent text selection */
+      outline: none;
+      /* remove focus outline */
+    }
+
+    button:focus {
+      outline: none;
+      /* ensure no outline on focus */
+    }
+
+    /* Optional: prevent focus via keyboard */
+    button:focus-visible {
+      outline: none;
+    }
+
+    /* Optional: disable keyboard focus altogether */
+    button {
+      pointer-events: auto;
+    }
+
+    button:focus {
+      outline: none;
+      /* To remove keyboard focusability, you’d have to manage tabindex or JS */
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: black;
+      overflow: hidden;
+      color: white;
+    }
+
+    /* Fixed top menu */
+    #topMenu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6vh;
+      background: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      z-index: 1000;
+    }
+
+    #topMenu button {
+      padding: 6px 10px;
+      font-size: 14px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background: #555;
+      color: white;
+    }
+
+    #topMenu button:hover {
+      background: #777;
+    }
+
+    /* Content area */
+    #content {
+      padding-top: 6vh;
+      position: relative;
+    }
+
+    /* Default (landscape) */
+    @media (orientation: landscape) {
+      .row {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        height: 94vh;
+      }
+
+      .video-cell {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+
+      .img-cell {
+        position: absolute;
+        top: 6vh;
+        left: 0;
+        width: 100vw;
+        height: 94vh;
+        z-index: 1001;
+        display: none;
+        /* hidden by default */
+      }
+    }
+
+    /* Portrait */
+    @media (orientation: portrait) {
+      .row {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 65vh;
+        /* PC 65, iPhone 72, iPad 80 */
+      }
+
+      .cell {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .img-cell {
+        border-top: 5px solid gray;
+        position: relative;
+        width: 100%;
+        height: 50%;
+        transform: none;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .cell {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .img-cell {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      object-fit: cover;
+    }
+
+    .video-name-label {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 2px 5px;
+      font-size: 16px;
+      z-index: 10;
+      pointer-events: none;
+      border-radius: 2px;
+    }
+
+    table {
+      margin: 10px 10%;
+      border-collapse: collapse;
+    }
+
+
+
+
+    #point-label {
+      width: 140px;
+      position: fixed;
+      background: rgba(0, 0, 0, 0.5);
+      top: 40vh;
+      left: calc(50vw - 70px);
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      z-index: 1003;
+      display: none;
+    }
+
+    #point-label p {
+      margin: 5px 0;
+    }
+
+    #score-text {
+      font-size: 84px;
+      font-weight: bold;
+    }
+
+    #score-label {
+      font-size: 24px;
+    }
+
+    #score-message {
+      font-size: 18px;
+    }
+
+    #score-time {
+      font-size: 16px;
+    }
+
+    .score-zero {
+      color: rgba(229, 0, 0, 0.8);
+    }
+
+    .score-one {
+      color: rgba(229, 80, 0, 0.8);
+    }
+
+    .score-two {
+      color: rgba(229, 160, 0, 0.8);
+    }
+
+    .score-three {
+      color: rgba(194, 229, 0, 0.8);
+    }
+
+    .score-four {
+      color: rgba(57, 229, 0, 0.8);
+    }
+
+    .score-five {
+      color: rgba(0, 142, 44, 0.8);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #tips {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1002;
+      color: white;
+      font-size: 18px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      /* semi-transparent black */
+      border-radius: 5px;
+      padding: 20px 5px;
+    }
+
+    #tips-banner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: orange;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-top-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    #tips-warn {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: green;
+      font-size: 8px;
+      padding: 2px 6px;
+      border-top-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="topMenu">
+    <!-- Toggle button -->
+    <button id="toggleBtn">...</button>
+
+    <!-- Array buttons -->
+    <button id="btnHN">HN</button>
+    <button id="btnQue">Quê</button>
+    <button id="btnCT">CT</button>
+    <button id="btnNui">Núi</button>
+    <button id="btnQLA">QL.A</button>
+    <button id="btnQLB">QL.B</button>
+
+    <!-- Mix buttons -->
+    <button id="btnMixHN">.HN</button>
+    <button id="btnMixQue">.Quê</button>
+    <button id="btnMixCT">.CT</button>
+    <button id="btnMixNui">.Núi</button>
+    <button id="btnMixQLA">.QLA</button>
+    <button id="btnMixQLB">.QLB</button>
+    <button id="btnMixAll">~</button>
+  </div>
+
+  <div id="content">
+    <div>
+      <table>
+        <tbody>
+          <tr>
+            <td colspan="2" style="text-align: center;">
+              <b>CÁC CHƯƠNG DƯỚI ĐÂY ĐÃ BAO GỒM CÁC TÌNH HUỐNG TAI NẠN ĐƯỢC ĐỀ CẬP TRONG CHƯƠNG 6</b>
+            </td>
+          </tr>
+
+          <tr>
+            <td><button id="btnHN2">HN</button></td>
+            <td><a>Chương 1: Giao thông trong đô thị</a></td>
+          </tr>
+          <tr>
+            <td><button id="btnQue2">Quê</button></td>
+            <td><a>Chương 2: Giao thông ngoài đô thị</a></td>
+          </tr>
+          <tr>
+            <td><button id="btnCT2">CT</button></td>
+            <td><a>Chương 3: Giao thông trên cao tốc</a></td>
+          </tr>
+          <tr>
+            <td><button id="btnNui2">Núi</button></td>
+            <td><a>Chương 4: Giao thông trên đường núi</a></td>
+          </tr>
+          <tr>
+            <td><button id="btnQLA2">QLA</button></td>
+            <td><a>Chương 5A: Giao thông trên đường quốc lộ (đường đôi)</a></td>
+          </tr>
+          <tr>
+            <td><button id="btnQLB2">QLB</button></td>
+            <td><a>Chương 5B: Giao thông trên đường quốc lộ (đường hai chiều)</a></td>
+          </tr>
+
+          <tr>
+            <td colspan="2" style="text-align: center;">
+              <b>CÁC TÌNH HUỐNG DƯỚI ĐÂY SẼ ĐƯỢC SẮP XẾP NGẪU NHIÊN ĐỂ ÔN TẬP</b>
+            </td>
+          </tr>
+
+          <tr>
+            <td><button id="btnMixHN2">...HN</button></td>
+            <td><a>Chương 1: Giao thông trong đô thị</a></td>
+          </tr>
+          <tr>
+            <td><button id="btnMixQue2">...Quê</button></td>
+            <td><a>Chương 2: Giao thông ngoài đô thị</a></td>
+          </tr>
+          <tr>
+            <td><button id="btnMixCT2">...CT</button></td>
+            <td><a>Chương 3: Giao thông trên cao tốc</a></td>
+          </tr>
+          <tr>
+            <td><button id="btnMixNui2">...Núi</button></td>
+            <td><a>Chương 4: Giao thông trên đường núi</a></td>
+          </tr>
+          <tr>
+            <td><button id="btnMixQLA2">...QLA</button></td>
+            <td><a>Chương 5A: Giao thông trên đường quốc lộ (đường đôi)</a></td>
+          </tr>
+          <tr>
+            <td><button id="btnMixQLB2">...QLB</button></td>
+            <td><a>Chương 5B: Giao thông trên đường quốc lộ (đường hai chiều)</a></td>
+          </tr>
+          <tr>
+            <td><button id="allMix">~</button></td>
+            <td><a>120 TÌNH HUỐNG NGẪU NHIÊN</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="point-label">
+    <p id="score-text">0</p>
+    <p id="score-label">ĐIỂM</p>
+    <p id="score-message"></p>
+    <p id="score-time"></p>
+  </div>
+
+  <script src="timeTags.js"></script>
+  <script>
+    const waitting_time = 0; // ms delay before autoplay
+
+    // Your arrays
+    const arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 41, 42, 104, 110, 118];
+    const arr2 = [30, 31, 32, 33, 34, 35, 36, 37, 38, 40];
+    const arr3 = [39, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 91, 93, 102];
+    const arr4 = [64, 65, 67, 68, 69, 70, 71, 72, 73, 92, 97, 98, 99, 106, 108, 112, 116];
+    const arr5 = [74, 75, 76, 77, 78, 80, 81, 83, 84, 88, 89, 90, 95, 96, 101, 103, 113];
+    const arr6 = [14, 66, 79, 82, 85, 86, 87, 94, 100, 105, 107, 109, 111, 114, 115, 117, 119, 120];
+    const arr7 = Array.from({ length: 120 }, (_, i) => i + 1);
+
+    let currentList = [];
+    let currentIndex = 0;
+    let currentVideoTags = 0;
+    window.showVideoNames = true;
+    let isDisplayingHelp = true;
+
+    // Toggle label names
+    function toggleVideoNames() {
+      window.showVideoNames = !window.showVideoNames;
+      const label = document.querySelector('.video-name-label');
+      if (!label) return;
+      if (!label.dataset.originalName) {
+        label.dataset.originalName = label.textContent;
+      }
+      label.textContent = window.showVideoNames
+        ? label.dataset.originalName
+        : '000TH';
+    }
+
+    // Shuffle helper
+    function shuffleArray(arr) {
+      const copy = arr.slice();
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function mixAndLoad(arr) {
+      loadFromList(shuffleArray(arr));
+    }
+    function loadArray(arr) {
+      loadFromList(arr);
+    }
+
+    // Main loader: create only one row
+    function loadFromList(list) {
+      currentList = list;
+      currentIndex = 0;
+
+      const content = document.getElementById('content');
+      content.innerHTML = `
+            <div id="tips">
+                <div id="tips-banner">GỢI Ý</div>
+                <div id="tips-text"></div>
+                <div id="tips-warn">HÃY TẮT NẾU ĐÃ THUỘC</div>
+            </div>
+            <svg id="movingCircle" style="position: absolute; top:0; left:0px; z-index: 1001" height="30vw" width="30vw"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="15vw" cy="15vw" stroke-width="8" fill="transparent" />
+            </svg>
+            <svg id="otherCircle" style="position: absolute; top:0; left:0px; z-index: 1001" height="30vw" width="30vw"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle r="30%" cx="15vw" cy="15vw" stroke-width="15" fill="transparent" />
+            </svg>`;
+
+      const row = document.createElement('div');
+      row.className = 'row';
+
+      // Video cell
+      const videoCell = document.createElement('div');
+      videoCell.className = 'cell video-cell';
+      videoCell.style.position = 'relative';
+
+      const video = document.createElement('video');
+      video.id = 'video';
+      video.muted = true;
+      video.controls = false;
+      video.playsInline = true;
+      video.loop = false;
+      video.setAttribute('role', 'img');
+      videoCell.appendChild(video);
+
+      // Label
+      const nameLabel = document.createElement('div');
+      nameLabel.className = 'video-name-label';
+      videoCell.appendChild(nameLabel);
+      videoCell.dataset.nameLabel = 'true';
+
+      // Image cell
+      const imgCell = document.createElement('div');
+      imgCell.className = 'cell img-cell';
+      if (window.matchMedia("(orientation: portrait)").matches) {
+        imgCell.style.display = 'block'; // always show in portrait
+      } else {
+        imgCell.style.display = 'none'; // hide by default when switching to landscape
+      }
+      imgCell.addEventListener('click', (e) => {
+        if (window.matchMedia("(orientation: landscape)").matches) {
+          imgCell.style.display = 'none';
+        }
+      });
+      row.appendChild(videoCell);
+      row.appendChild(imgCell);
+      content.appendChild(row);
+
+      updateMedia(0);
+      handleOrientationChange();
+
+      video.addEventListener("pause", (e) => { calculatePoint(video.currentTime) });
+      video.addEventListener("play", (e) => { document.getElementById("point-label").style.display = "none" });
+
+      // Add event to click into video
+      video.addEventListener('click', (e) => {
+        const rect = videoCell.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const clickY = e.clientY - rect.top;
+
+        const halfW = rect.width / 2;
+        const halfH = rect.height / 2;
+
+        if (clickX < halfW && clickY < halfH) {
+          // Top-left: pause video
+          // Hide image cell in landscape
+          if (window.matchMedia("(orientation: landscape)").matches) {
+            const imgCell = document.querySelector('.img-cell');
+            if (imgCell) imgCell.style.display = 'none';
+          }
+          video.paused ? video.play() : video.pause();
+        }
+        else if (clickX >= halfW && clickY < halfH) {
+          // Top-right: toggle img-cell
+          toggleImageCell();
+          if (window.matchMedia("(orientation: portrait)").matches) {
+            video.paused ? video.play() : video.pause(); //  in portrait
+          } else {
+            video.pause(); // in landscape
+          }
+        }
+        else if (clickX < halfW && clickY >= halfH) {
+          // Bottom-left: previous
+          showPrevious();
+        }
+        else if (clickX >= halfW && clickY >= halfH) {
+          // Bottom-right: next
+          showNext();
+        }
+      });
+    }
+
+    // Update video/image for current index
+    function updateMedia(index) {
+      currentIndex = index;
+      currentVideoTags = videoTags[currentList[index]];
+      const num = String(currentList[currentIndex]).padStart(3, '0');
+      const row = document.querySelector('.row');
+      const video = row.querySelector('video');
+      const nameLabel = row.querySelector('.video-name-label');
+      const imgCell = row.querySelector('.img-cell');
+
+      video.pause();
+      video.src = `v/th${num}.mp4`;
+      video.load();
+
+      nameLabel.textContent = `${String(currentIndex + 1).padStart(3, '0')}\/${currentList.length} TH${num}`;
+      nameLabel.dataset.originalName = `${String(currentIndex + 1).padStart(3, '0')}\/${currentList.length} TH${num}`;
+      if (!window.showVideoNames) {
+        nameLabel.textContent = `${String(currentIndex + 1).padStart(3, '0')}\/${currentList.length} TH000`;
+      }
+
+      imgCell.style.backgroundImage = `i/th${num}.jpg)`;
+
+      //Moving circle and speed change
+
+
+
+      video.addEventListener('loadedmetadata', () => {
+        movingCirclePosition(currentVideoTags.ms, currentVideoTags.me, currentVideoTags.ts - 2.5, currentVideoTags.ts, currentVideoTags.m);
+        videoSpeedChange(currentVideoTags.ts - 2.5, currentVideoTags.ts);
+      });
+
+
+      setTimeout(() => {
+        video.play();
+      }, waitting_time);
+    }
+
+    // Navigation
+    function showPrevious() {
+      if (currentIndex > 0) {
+        updateMedia(currentIndex - 1);
+        // Hide image cell in landscape
+        if (window.matchMedia("(orientation: landscape)").matches) {
+          const imgCell = document.querySelector('.img-cell');
+          if (imgCell) imgCell.style.display = 'none';
+        }
+      } else {
+        alert("Đang ở video đầu tiên!!!");
+      }
+    }
+
+    function showNext() {
+      if (currentIndex < currentList.length - 1) {
+        updateMedia(currentIndex + 1);
+        // Hide image cell in landscape
+        if (window.matchMedia("(orientation: landscape)").matches) {
+          const imgCell = document.querySelector('.img-cell');
+          if (imgCell) imgCell.style.display = 'none';
+        }
+      } else {
+        alert("Đã hết video!!!");
+      }
+    }
+
+    // Handle orientation change or resize
+    function handleOrientationChange() {
+      const imgCell = document.querySelector('.img-cell');
+      if (!imgCell) return;
+
+      if (window.matchMedia("(orientation: portrait)").matches) {
+        imgCell.style.display = 'block'; // always show in portrait
+      } else {
+        imgCell.style.display = 'none'; // hide by default when switching to landscape
+      }
+    }
+
+    // Toggle image visibility (landscape only)
+    function toggleImageCell() {
+      const imgCell = document.querySelector('.img-cell');
+      if (!imgCell) return;
+      if (!window.matchMedia("(orientation: landscape)").matches) return; // ignore if portrait
+      imgCell.style.display = (imgCell.style.display === 'none' || imgCell.style.display === '') ? 'block' : 'none';
+    }
+
+
+    window.addEventListener('resize', handleOrientationChange);
+    window.addEventListener('orientationchange', handleOrientationChange);
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      const video = document.querySelector('.row video');
+      switch (e.key) {
+        case 'ArrowUp': case 'w': case 'W':
+          e.preventDefault();
+          showPrevious();
+          break;
+        case 'ArrowDown': case 's': case 'S':
+          e.preventDefault();
+          showNext();
+          break;
+        case ' ':
+          e.preventDefault();
+          if (!video) return;
+          // Hide image cell in landscape
+          if (window.matchMedia("(orientation: landscape)").matches) {
+            const imgCell = document.querySelector('.img-cell');
+            if (imgCell) imgCell.style.display = 'none';
+          }
+          video.paused ? video.play() : video.pause();
+          break;
+        case 'e': case 'E':
+          e.preventDefault();
+          toggleImageCell();
+          if (!video) return;
+          if (window.matchMedia("(orientation: portrait)").matches) {
+            video.paused ? video.play() : video.pause(); //  in portrait
+          } else {
+            video.pause(); // in landscape
+          }
+
+          break;
+        case 'ArrowLeft': case 'a': case 'A':
+          e.preventDefault();
+          video.currentTime = Math.max(0, video.currentTime - 2);
+          break;
+        case 'ArrowRight': case 'd': case 'D':
+          e.preventDefault();
+          video.currentTime = Math.max(0, video.currentTime + 2);
+          break;
+      }
+    });
+
+    function calculatePoint(timeUserPressSpace) {
+      const pointLabel = document.getElementById("point-label");
+      const scoreText = document.getElementById("score-text");
+      const scoreMessage = document.getElementById("score-message");
+      const scoreTime = document.getElementById("score-time");
+
+      let score = 0;
+      let message = "";
+      let className = "";
+      let compareTime = Number((currentVideoTags.ts - timeUserPressSpace).toFixed(1));
+      let timePerPoint = (currentVideoTags.te - currentVideoTags.ts) / 5;
+
+      if (currentVideoTags.ts > timeUserPressSpace) {
+        score = 0;
+        message = "Quá nhanh";
+        className = "score-zero";
+      } else if (currentVideoTags.ts + 0.15 > timeUserPressSpace) {
+        score = 5;
+        if (isDisplayingHelp) {
+          message = "Tốt";
+        } else {
+          message = "Hơi Nhanh";
+        }
+        className = "score-five";
+      } else if (timeUserPressSpace > currentVideoTags.ts + 0.15 && timeUserPressSpace <= currentVideoTags.ts + timePerPoint) {
+        score = 5;
+        message = "Rất tốt";
+        className = "score-five";
+      } else if (timeUserPressSpace > currentVideoTags.ts + timePerPoint && timeUserPressSpace <= currentVideoTags.ts + timePerPoint * 2) {
+        score = 4;
+        message = "Rất tốt";
+        className = "score-four";
+      } else if (timeUserPressSpace > currentVideoTags.ts + timePerPoint * 2 && timeUserPressSpace <= currentVideoTags.ts + timePerPoint * 3) {
+        score = 3;
+        message = "Hơi Chậm";
+        className = "score-three";
+      } else if (timeUserPressSpace > currentVideoTags.ts + timePerPoint * 3 && timeUserPressSpace <= currentVideoTags.ts + timePerPoint * 4) {
+        score = 2;
+        message = "Chú ý";
+        className = "score-two";
+      } else if (timeUserPressSpace > currentVideoTags.ts + timePerPoint * 4 && timeUserPressSpace <= currentVideoTags.te) {
+        score = 1;
+        message = "Chậm";
+        className = "score-one";
+      } else if (timeUserPressSpace > currentVideoTags.te) {
+        score = 0;
+        message = "Quá Chậm";
+        className = "score-zero";
+      }
+
+      // Update DOM elements
+      pointLabel.style.display = "block";
+      scoreText.innerHTML = score;
+      scoreText.className = className;
+      scoreMessage.innerHTML = message;
+      scoreTime.innerHTML = `${compareTime}s`;
+    }
+
+  </script>
+  <script>
+    function movingCirclePosition(ms, me, timeStart, timeEnd, tips) {
+      let xStart, yStart, xEnd, yEnd, xOther, yOther;
+
+      const parseCoord = (str) => {
+        const [xStr, yStr] = str.split(".");
+        return { x: parseInt(xStr), y: parseInt(yStr) };
+      };
+
+      const msCoord = parseCoord(ms);
+      const meCoords = me.split(",");
+
+      const meCoord1 = parseCoord(meCoords[0]);
+
+      xStart = msCoord.x;
+      yStart = msCoord.y + 5;
+      xEnd = meCoord1.x;
+      yEnd = meCoord1.y + 5;
+      xOther = null;
+      yOther = null;
+
+      if (meCoords.length > 1) {
+        const meCoord2 = parseCoord(meCoords[1]);
+        xOther = meCoord2.x;
+        yOther = meCoord2.y;
+      }
+
+      const video = document.getElementById('video');
+      const movingCircle = document.getElementById('movingCircle');
+      const circle = movingCircle.querySelector('circle');
+      const otherCircle = document.getElementById('otherCircle');
+      const tipsElement = document.getElementById('tips');
+      const tipsBanner = document.getElementById('tips-banner');
+      const tipsText = document.getElementById('tips-text');
+
+
+
+      function updatePosition() {
+        const currentTime = video.currentTime;
+        const disappearTime = timeEnd + 1;
+        const rect = video.getBoundingClientRect();
+
+        if (currentTime < timeEnd - 0.5 || currentTime > timeEnd + 0.2) {
+          otherCircle.style.display = 'none';
+        } else if (xOther !== null && yOther !== null) {
+          // Position other circle
+          otherCircle.style.display = 'block';
+          const svgOtherRect = otherCircle.getBoundingClientRect();
+          otherCircle.style.left = `${(xOther / 100 * rect.width) - svgOtherRect.width / 2}px`;
+          otherCircle.style.top = `${(yOther / 100 * rect.height) - svgOtherRect.height / 2}px`;
+        } else {
+          otherCircle.style.display = 'none';
+        }
+
+        if (currentTime < timeStart || currentTime > disappearTime) {
+          movingCircle.style.display = 'none';
+          tipsElement.style.display = 'none';
+          circle.setAttribute('r', '45%');
+          circle.setAttribute('stroke', 'green'); // Reset stroke
+        } else {
+          movingCircle.style.display = 'block';
+          tipsElement.style.display = 'block';
+
+          // Position moving circle
+          const xProgress = Math.min(Math.max((currentTime - timeStart) / (timeEnd - timeStart), 0), 1);
+          const x = (xStart + (xEnd - xStart) * xProgress) / 100 * rect.width;
+          const y = (yStart + (yEnd - yStart) * xProgress) / 100 * rect.height;
+
+          const svgRect = movingCircle.getBoundingClientRect();
+          movingCircle.style.left = `${x - svgRect.width / 2}px`;
+          movingCircle.style.top = `${y - svgRect.height / 2}px`;
+
+          // Radius: from 45% to 25%
+          const shrinkProgress = xProgress;
+          const inflateProgress = (currentTime - timeEnd) / (disappearTime - timeEnd);
+
+          if (currentTime >= timeStart && currentTime <= timeEnd) {
+            const rPercent = 45 - (20 * shrinkProgress); // from 45% to 25%
+            circle.setAttribute('r', `${rPercent}%`);
+          } else if (currentTime >= timeEnd && currentTime <= disappearTime) {
+            const rPercent = 25 + (20 * inflateProgress); // from 25% to 45%
+            circle.setAttribute('r', `${rPercent}%`);
+          }
+
+          // Position #tips above the circle dynamically based on rPercent
+          tipsText.innerHTML = tips;
+          const tipsRect = tipsElement.getBoundingClientRect();
+          const circleRect = circle.getBoundingClientRect();
+          tipsElement.style.left = `${x - tipsRect.width / 2}px`;
+          tipsElement.style.top = `${y - tipsRect.height - circleRect.height / 2 - 5}px`;
+
+          // Stroke color: green → yellow → red
+          if (currentTime <= timeEnd) {
+            // Interpolate green (0,255,0) to yellow (255,255,0)
+            const r = Math.round(255 * xProgress);
+            const g = 255;
+            const b = 0;
+            circle.setAttribute('stroke', `rgb(${r},${g},${b})`);
+            otherCircle.querySelector('circle').setAttribute('stroke', `rgb(${r},${g},${b})`);
+            tipsBanner.style.backgroundColor = 'orange';
+          } else {
+            // After timeEnd, instantly red
+            circle.setAttribute('stroke', 'red');
+            otherCircle.querySelector('circle').setAttribute('stroke', 'red');
+            tipsBanner.style.backgroundColor = 'red';
+          }
+        }
+
+        requestAnimationFrame(updatePosition);
+      }
+
+
+      requestAnimationFrame(updatePosition);
+    }
+
+    function videoSpeedChange(timeStart, timeEnd) {
+      const video = document.getElementById('video');
+
+      function updateSpeed() {
+        const t = video.currentTime;
+
+        // Only adjust speed if not paused
+        if (!video.paused) {
+          if (t < timeStart - 0.5) {
+            video.playbackRate = 1.0;
+          } else if (t >= timeStart - 0.5 && t < timeEnd - 1) {
+            video.playbackRate = 0.7;
+          } else if (t >= timeEnd - 1 && t < timeEnd - 0.2) {
+            video.playbackRate = 0.4;
+          } else if (t >= timeEnd - 0.2 && t < timeEnd + 0.2) {
+            video.playbackRate = 0.1;
+          } else if (t >= timeEnd + 0.2 && t <= timeEnd + 0.5) {
+            video.playbackRate = 0.4;
+          } else if (t > timeEnd + 0.5 && t <= timeEnd + 1) {
+            video.playbackRate = 0.7;
+          } else if (t > timeEnd + 1) {
+            video.playbackRate = 1.0;
+          }
+        }
+
+        requestAnimationFrame(updateSpeed);
+      }
+
+      requestAnimationFrame(updateSpeed);
+    }
+  </script>
+  <script>
+    document.getElementById("toggleBtn").addEventListener("click", toggleVideoNames());
+    // Load buttons
+    document.getElementById("btnHN").addEventListener("click", () => loadArray(arr1));
+    document.getElementById("btnQue").addEventListener("click", () => loadArray(arr2));
+    document.getElementById("btnCT").addEventListener("click", () => loadArray(arr3));
+    document.getElementById("btnNui").addEventListener("click", () => loadArray(arr4));
+    document.getElementById("btnQLA").addEventListener("click", () => loadArray(arr5));
+    document.getElementById("btnQLB").addEventListener("click", () => loadArray(arr6));
+    // Mix buttons
+    document.getElementById("btnMixHN").addEventListener("click", () => mixAndLoad(arr1));
+    document.getElementById("btnMixQue").addEventListener("click", () => mixAndLoad(arr2));
+    document.getElementById("btnMixCT").addEventListener("click", () => mixAndLoad(arr3));
+    document.getElementById("btnMixNui").addEventListener("click", () => mixAndLoad(arr4));
+    document.getElementById("btnMixQLA").addEventListener("click", () => mixAndLoad(arr5));
+    document.getElementById("btnMixQLB").addEventListener("click", () => mixAndLoad(arr6));
+    document.getElementById("btnMixAll").addEventListener("click", () => mixAndLoad(arr7));
+
+
+
+    // Load buttons
+    document.getElementById("btnHN2").addEventListener("click", () => loadArray(arr1));
+    document.getElementById("btnQue2").addEventListener("click", () => loadArray(arr2));
+    document.getElementById("btnCT2").addEventListener("click", () => loadArray(arr3));
+    document.getElementById("btnNui2").addEventListener("click", () => loadArray(arr4));
+    document.getElementById("btnQLA2").addEventListener("click", () => loadArray(arr5));
+    document.getElementById("btnQLB2").addEventListener("click", () => loadArray(arr6));
+
+    // Mix buttons
+    document.getElementById("btnMixHN2").addEventListener("click", () => mixAndLoad(arr1));
+    document.getElementById("btnMixQue2").addEventListener("click", () => mixAndLoad(arr2));
+    document.getElementById("btnMixCT2").addEventListener("click", () => mixAndLoad(arr3));
+    document.getElementById("btnMixNui2").addEventListener("click", () => mixAndLoad(arr4));
+    document.getElementById("btnMixQLA2").addEventListener("click", () => mixAndLoad(arr5));
+    document.getElementById("btnMixQLB2").addEventListener("click", () => mixAndLoad(arr6));
+    document.getElementById("allMix").addEventListener("click", () => mixAndLoad(arr7));
+
+  </script>
+
+</body>
+
+</html>
